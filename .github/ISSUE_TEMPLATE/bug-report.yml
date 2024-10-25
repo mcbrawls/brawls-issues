@@ -6,11 +6,6 @@ assignees:
   - andantet
   - radstevee
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ### Your Minecraft username
-
   - type: input
     id: contact
     attributes:
@@ -54,11 +49,11 @@ body:
       label: Minecraft Client/Launcher
       description: Are you using a launcher or client?
       options:
+        - Vanilla
+        - Fabric
         - Lunar Client
         - Feather Client
         - Badlion Client
-        - Vanilla
-        - Fabric
       default: 0
     validations:
       required: true
