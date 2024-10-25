@@ -62,7 +62,7 @@ body:
     id: logs
     attributes:
       label: Game log
-      description: Your game's log output, typically found at `.minecraft/logs/latest.log`.
+      description: "Your game's log output, typically found at `.minecraft/logs/latest.log`."
       render: log
     validations:
       required: false
@@ -81,7 +81,7 @@ body:
       label: Before submitting
       description: 
       options:
-        - label: I've made sure this can be reproduced and have given proper instructions
+        - label: I have made sure this can be reproduced and have given proper instructions
           required: true
         - label: I have checked all boxes without reading them
           required: false
