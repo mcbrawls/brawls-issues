@@ -6,28 +6,36 @@ assignees:
   - andantet
   - radstevee
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Your Minecraft username
+
   - type: input
     id: contact
     attributes:
-      label: Username
-      description: What is your minecraft username?
+      label: Your Minecraft username
+      description: 
       placeholder: e.g. radstevee
     validations:
       required: false
-  - type: markdown
+
+  - type: textarea
     id: what-happened
     attributes:
       label: What happened?
       description: Please describe what exactly happened.
     validations:
       required: true
-  - type: markdown
+
+  - type: textarea
     id: reproduce
     attributes:
       label: Steps to reproduce
       description: Please provide exact steps to reproduce this bug. You can attach images and videos.
     validations:
       required: true
+
   - type: dropdown
     id: version
     attributes:
@@ -39,6 +47,7 @@ body:
       default: 0
     validations:
       required: true
+
   - type: dropdown
     id: client
     attributes:
@@ -53,6 +62,7 @@ body:
       default: 0
     validations:
       required: true
+
   - type: textarea
     id: logs
     attributes:
@@ -61,6 +71,7 @@ body:
       render: log
     validations:
       required: false
+
   - type: textarea
     id: other
     attributes:
