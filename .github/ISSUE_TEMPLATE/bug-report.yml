@@ -1,0 +1,70 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - andantet
+  - radstevee
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Username
+      description: What is your minecraft username?
+      placeholder: e.g. radstevee
+    validations:
+      required: false
+  - type: markdown
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please describe what exactly happened.
+    validations:
+      required: true
+  - type: markdown
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please provide exact steps to reproduce this bug. You can attach images and videos.
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Minecraft Version
+      description: What Minecraft Version are you using?
+      options:
+        - 1.21(.1)
+        - 1.21.3
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: Minecraft Client/Launcher
+      description: Are you using a launcher or client?
+      options:
+        - Lunar Client
+        - Feather Client
+        - Badlion Client
+        - Vanilla
+        - Fabric
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Game log
+      description: Your game's log output, typically found at `.minecraft/logs/latest.log`.
+      render: log
+    validations:
+      required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: Other relevant information
+      description: For example, your mod list.
+    validations:
+      required: false
