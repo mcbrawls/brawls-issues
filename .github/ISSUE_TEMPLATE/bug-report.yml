@@ -74,3 +74,16 @@ body:
       description: For example, your mod list.
     validations:
       required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      description: 
+      options:
+        - label: I've made sure this can be reproduced and have given proper instructions
+          required: true
+        - label: I have checked all boxes without reading them
+          required: false
+        - label: I have searched existing issues for this bug
+          required: true
