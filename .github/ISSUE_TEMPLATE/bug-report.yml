@@ -1,0 +1,89 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - andantet
+  - radstevee
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Your Minecraft username
+      description: 
+      placeholder: e.g. radstevee
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please describe what exactly happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please provide exact steps to reproduce this bug. You can attach images and videos.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Minecraft Version
+      description: What Minecraft Version are you using?
+      options:
+        - 1.21(.1)
+        - 1.21.3
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: Minecraft Client/Launcher
+      description: Are you using a launcher or client?
+      options:
+        - Vanilla
+        - Fabric
+        - Lunar Client
+        - Feather Client
+        - Badlion Client
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Game log
+      description: "Your game's log output, typically found at `.minecraft/logs/latest.log`."
+      render: log
+    validations:
+      required: false
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Other relevant information
+      description: For example, your mod list.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      description: 
+      options:
+        - label: I have made sure this can be reproduced and have given proper instructions
+          required: true
+        - label: I have checked all boxes without reading them
+          required: false
+        - label: I have searched existing issues for this bug
+          required: true

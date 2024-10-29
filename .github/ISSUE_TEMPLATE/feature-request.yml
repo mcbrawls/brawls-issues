@@ -1,0 +1,24 @@
+name: Feature Request
+description: Request a feature to be added
+title: "[Request]: "
+labels: ["feature-request"]
+assignees:
+  - andantet
+  - radstevee
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Tell us about your feature request.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      description: 
+      options:
+        - label: I've made sure this feature is not planned or currently being worked on
+          required: true
